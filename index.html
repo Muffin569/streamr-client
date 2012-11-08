@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+	<head>
+		<title>test</title>
+        <meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+        <script src="jquery.js"></script>
+        <script src="script.js"></script>
+	</head>
+	
+	<body style="margin: 0px;">
+        <!-- top -->
+		<div style="position: relative; margin: 20px;">
+			<div id="boxTitle" class="box">
+				ImageStreamr
+			</div>
+			<div class="box" style="width: 45px; float: right; margin-left: 20px;">
+				info
+			</div>
+			<div class="box" style="width: 45px; float: right;">
+				link
+			</div>
+			
+			<div style="clear: both;"></div>
+		</div>
+        
+        <!-- pic -->
+		<div id="bild">
+            
+		</div>
+        
+        <!-- pfeilbox -->
+        <div id="pfeilbox">
+            <div id="pfeillinks" class="box">
+            </div>
+            
+            <div id="pfeilrechts" class="box">
+            </div>
+            
+            <div id="titel">Loading...<div>
+        </div>
+        
+        <!-- init -->
+        <script>
+            var loader = new Loader();
+            
+            loader.ready = function() {
+                
+                gehe(0);
+                setTimeout(function() {
+                    einblenden();
+                }, 500);
+            };            
+            
+        
+            $('#pfeillinks').click(function() {
+                console.info("links");
+                ausblenden();
+                
+                setTimeout(function() {
+                    gehe(-1);   
+                }, 200);
+        	});
+        
+        	$('#pfeilrechts').click(function() {
+                console.info("rechts");
+                ausblenden();
+                
+                setTimeout(function() {
+                    gehe(1);
+                }, 200);
+        	});
+            
+            function gehe(richtung) {
+                loader.go(richtung);
+                
+                $("#titel").html(loader.imgTitle);
+                $("#bild").css("background-image", "url('"+loader.imgUrl+"')");
+            }
+            
+            function einblenden() {
+                $("#bild").css("opacity", "1");
+            }
+            
+            function ausblenden() {
+                $("#bild").css("opacity", "0");
+                setTimeout(einblenden, 200);
+            }
+        </script>
+	</body>
+</html>

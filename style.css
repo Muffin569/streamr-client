@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'RobotoThin';
+    src: url('res/font/Roboto-Thin-webfont.eot');
+    src: url('res/font/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('res/font/Roboto-Thin-webfont.woff') format('woff'),
+         url('res/font/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('res/font/Roboto-Thin-webfont.svg#RobotoThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('res/font/Roboto-Light-webfont.eot');
+    src: url('res/font/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('res/font/Roboto-Light-webfont.woff') format('woff'),
+         url('res/font/Roboto-Light-webfont.ttf') format('truetype'),
+         url('res/font/Roboto-Light-webfont.svg#RobotoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: "RobotoThin", sans-serif;
+    color: white;
+    background-color: #2d2d2d;
+}
+
+.box {
+	height: 45px;
+	background-color: rgba(0, 0, 0, .65);
+
+}
+
+#boxTitle {
+    float: left;
+    line-height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#bild {
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute; left: 20px; right: 20px; top: 85px; bottom: 85px;
+    
+    opacity: 0;
+    transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+}
+
+#pfeilbox {
+    height: 45px;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    
+}
+
+#pfeillinks {
+    background-image: url('res/img/ic_pfeil_links.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    float: left;
+    height: 45px;
+    width: 45px;
+}
+
+
+#pfeilrechts {
+    background-image: url('res/img/ic_pfeil_rechts.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    float: right;
+    height: 45px;
+    width: 45px;
+}
+
+#titel {
+    background-color: rgba(0, 0, 0, 65);
+    position: absolute;
+    left: 65px;
+    right: 65px;
+    top: 0px;
+    bottom: 0px;
+    
+    line-height: 45px;
+    text-align: center;
+}
+
